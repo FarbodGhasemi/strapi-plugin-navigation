@@ -27,8 +27,8 @@ export const useInitialConfig = ({ config, setFormValue }: UseInitialConfigParam
   const isInitializedRef = useRef(false);
 
   useEffect(() => {
-    if (config && !initialized.current) {
-      initialized.current = true;
+    if (config && !isInitializedRef.current) {
+      isInitializedRef.current = true;
       const {
         additionalFields,
         contentTypes,
