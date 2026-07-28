@@ -24,7 +24,7 @@ type UseInitialConfigParams = {
 };
 
 export const useInitialConfig = ({ config, setFormValue }: UseInitialConfigParams) => {
-  const initialized = useRef(false);
+  const isInitializedRef = useRef(false);
 
   useEffect(() => {
     if (config && !initialized.current) {
